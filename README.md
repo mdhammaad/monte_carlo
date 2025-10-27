@@ -17,11 +17,6 @@ Probability Distributions
 Statistical Estimation  
 Simulation Repetition and Convergence  
 
-## Setup Instructions
-```bash
-git clone https://github.com/<your-username>/monte-carlo-simulation.git
-cd monte-carlo-simulation
-
 ## Install Dependencies
 pip install -r requirements.txt
 pip freeze > requirements.txt
@@ -30,3 +25,9 @@ pip install numpy pandas matplotlib jupyter
 ## License
 
 This project is licensed under the MIT License
+
+## Setup Instructions
+```bash
+git clone https://github.com/<your-username>/monte-carlo-simulation.git
+
+
