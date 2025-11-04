@@ -8,8 +8,8 @@ runReplication = function(test, filename, seed) {
   if (filename %in% list.files("./sims-a"))
       return()
       
-      A  = rnorm(27, mean = 10500, sd = 1200)
-      B  = rnorm(27, mean = 11000, sd = 1200)
+      A  = rnorm(100, mean = 600, sd = 75)
+      B  = rnorm(100, mean = 700, sd = 75)
       
       if (test == "Student")
         hypothesis_test = t.test(A, B, var.equal = T)
@@ -36,7 +36,7 @@ sims = expand_grid(
     seed = row_number()
   )
 
-plan(multisession, workers = 4)
+plan(multisession, workers = 2)
 future_pwalk(list(sims[["test"]], 
                   sims[["filename"]],
                   sims[["seed"]]), 
